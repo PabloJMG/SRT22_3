@@ -1,0 +1,4 @@
+gcc source/openf.c -lm -fopenmp -g -o obj/openf
+./obj/openf
+gcc source/bvpar.c source/crea_imagen.c -lm -fopenmp -g -o obj/bvpar
+./obj/bvpar

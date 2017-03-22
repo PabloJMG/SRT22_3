@@ -1,0 +1,21 @@
+import math as ma
+import numpy as np
+import random as rnd
+from scipy.sparse import sparse_cscmatrix
+NumAng=10
+NumPix=200
+dim=64
+
+
+for con1 in range(NumAng):
+	finp=abrir_archivo(con1)
+	for line in finp:
+		b.append=finp.readline()
+		
+print b
+
+
+
+def abrir_archivo(con)
+	filename = 'respy/angulo_%d.txt' %(con)
+	return open(filename, "r")

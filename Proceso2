@@ -1,0 +1,5 @@
+make -f fp2
+./openf2
+make -f SARTmk
+./SRT
+#rm openf SART

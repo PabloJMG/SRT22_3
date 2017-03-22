@@ -1,0 +1,23 @@
+#Compilador
+CC=gcc
+
+#Librerias
+LIBS= -lm -fopenmp
+
+#Direccion de objeto
+ODIR=../obj
+
+#Definicion de objetos
+_OBJ = openf.o
+OBJ=$(patsubst %, $(ODIR)/%, $(_OBJ))
+
+#Compilacion de objetos
+$(ODIR)/%.o : %.c
+	$(CC) -c -o $@ $< $(LIBS)
+
+opfp: $(OBJ) 
+	gcc -o $@ $^ $(LIBS)
+
+.PHONY: clean
+clean:
+	rm -f $(ODIR)/*.o

@@ -1,0 +1,5 @@
+1. Cambiar el #define PATH en source/FP.c
+
+2. Cambiar el PATH en gp/LFTT.gp
+
+3. Ejecutar el archivo CompileNRun desde el directorio donde se encuentra este README.

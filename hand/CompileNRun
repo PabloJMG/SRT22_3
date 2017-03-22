@@ -1,0 +1,2 @@
+gcc source/FP.c -lm -g -o obj/FP1.o
+./obj/FP1.o 

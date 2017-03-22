@@ -1,0 +1,4 @@
+gcc source/openf.c -lm -g -fopenmp -o obj/ope
+./obj/ope
+gcc source/SARTdeb10_3.c -lm -g -o obj/SD
+./obj/SD

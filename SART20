@@ -1,0 +1,2 @@
+gcc source/SART24_2.c -lm -g -o obj/SAR20
+./obj/SAR20

@@ -1,0 +1,16 @@
+CC=gcc
+LIBS=-lm -fopenmp
+SDIR=source
+ODIR=obj
+_OBJ=SARTdeb10_3.o
+OBJ=$(patsubst %, $(ODIR)/%, $(_OBJ))
+
+$(ODIR)/%.o: $(SDIR)/%.c
+	$(CC) -c -o $@ $<
+
+SRT:$(OBJ)
+	$(CC) -o $@ $^ $(LIBS)
+
+.PHONY: clean
+clean:
+	rm -f $(ODIR)/*.o

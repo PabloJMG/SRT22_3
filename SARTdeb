@@ -1,0 +1,2 @@
+gcc source/SARTdeb.c -lm -g -o obj/SD
+./obj/SD

@@ -1,0 +1,10 @@
+#Num de angulos
+16
+#Numero de rayos/angulo
+1000000
+#Numero de detectores
+5000
+#Factor dimensional (no debería ser entero)
+2
+100
+20

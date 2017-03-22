@@ -1,0 +1,30 @@
+#Compilador
+CC=gcc
+
+#Librerias
+LIBS= -lm -fopenmp
+#Direcciones
+SDIR=source
+HDIR=headers
+#Dependencias (se encuentra en carpete source)
+_DEPS = funciones.h
+DEPS=$(patsubst %, $(HDIR)/%, $(_DEPS))
+
+
+#Direccion de objeto
+ODIR=obj
+
+#Definicion de objetos
+_OBJ = bvpar.o crea_imagen.o
+OBJ=$(patsubst %, $(ODIR)/%, $(_OBJ))
+
+bvpar: $(OBJ)
+	gcc -o $@ $^ $(LIBS)
+#Compilacion de objetos
+$(ODIR)/%.o :$(SDIR)/%.c $(DEPS)$
+	$(CC) -c -o $@ $< $(LIBS)
+
+
+.PHONY: clean
+clean:
+	rm -f $(ODIR)/*.o
